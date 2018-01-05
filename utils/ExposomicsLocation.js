@@ -42,4 +42,19 @@ export default class ExposomicsLocation {
     }
     throw new Error('state not found');
   }
+
+  /**
+   * @return {String}
+   */
+  getZipcode() {
+    const addressComponents = this.getAddressComponents();
+
+    for (const ac of addressComponents) {
+      const types = ac.types;
+      if (types.indexOf('postal_code') !== -1) {
+        return ac.short_name;
+      }
+    }
+    throw new Error('zipcode not found');
+  }
 }
