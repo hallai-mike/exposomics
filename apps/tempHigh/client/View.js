@@ -132,48 +132,7 @@ export default class View extends React.PureComponent {
               </div>
             </ul>
           </div>
-          <div className={cx('col-xs-6', cs.moreInfoContent)}>
-            <div className="row">
-              <p className={cs.footerTitle}>
-                If you want to know more about temperature highs and how
-                <br />they might affect your health check out the following
-                links:
-              </p>
-            </div>
-            <ul className={cs.moreInfo}>
-              <div className="row">
-                <div className="col-xs-6">
-                  <li>
-                    <a
-                      href="https://www3.epa.gov/airnow/aqi_brochure_02_14.pdf"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      EPA&apos;s Air Quality Brochure
-                    </a>
-                    <br />
-                    <span>
-                      A comprehensive guide to everything AQI (20 min read)
-                    </span>
-                  </li>
-                </div>
-
-                <div className="col-xs-6">
-                  <li>
-                    <a
-                      href="https://forum.airnowtech.org/t/the-aqi-equation/169"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      How AQI is Calculated
-                    </a>
-                    <br />
-                    <span>5 min read</span>
-                  </li>
-                </div>
-              </div>
-            </ul>
-          </div>
+          <div className={cx('col-xs-6', cs.moreInfoContent)} />
         </div>
       </div>
     );
