@@ -82,24 +82,21 @@ export default class View extends React.PureComponent {
                   <div className={cx('col-xs-1', cs.zero)}>
                     <span />
                     <br />
-                    <p>Good</p>
+                    <p> &lt; 0C </p>
                   </div>
                 </li>
                 <li>
                   <div className={cx('col-xs-1', cs.one)}>
                     <span />
                     <br />
-                    <p>Moderate</p>
+                    <p>0C - 10C</p>
                   </div>
                 </li>
                 <li>
                   <div className={cx('col-xs-1', cs.two)}>
                     <span />
                     <br />
-                    <p>
-                      {' '}
-                      Unhealthy <br />for <br />sensitive <br />groups
-                    </p>
+                    <p>10C - 20C</p>
                   </div>
                 </li>
                 <li>
@@ -107,7 +104,7 @@ export default class View extends React.PureComponent {
                     <span />
                     <br />
 
-                    <p> Unhealthy</p>
+                    <p> 20C - 30C </p>
                   </div>
                 </li>
                 <li>
@@ -115,10 +112,7 @@ export default class View extends React.PureComponent {
                     <span />
                     <br />
 
-                    <p>
-                      {' '}
-                      Very <br />unhealthy
-                    </p>
+                    <p>30C - 40C</p>
                   </div>
                 </li>
                 <li>
@@ -126,13 +120,12 @@ export default class View extends React.PureComponent {
                     <span />
                     <br />
 
-                    <p> Hazardous</p>
+                    <p> &gt; 40C</p>
                   </div>
                 </li>
               </div>
             </ul>
           </div>
-          <div className={cx('col-xs-6', cs.moreInfoContent)} />
         </div>
       </div>
     );
