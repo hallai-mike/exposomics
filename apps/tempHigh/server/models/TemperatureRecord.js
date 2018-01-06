@@ -3,12 +3,12 @@ import mongoose from 'mongoose';
 const TemperatureRecordSchema = new mongoose.Schema(
   {
     zipcode: {
-      type: String,
+      type: Number,
       required: true,
       unique: false,
     },
     date: {
-      type: String,
+      type: Number,
       required: true,
       unique: false,
     },

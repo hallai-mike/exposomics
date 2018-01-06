@@ -28,13 +28,15 @@ export default (async function controller(places) {
     // Note - this function has access to collection and locationManager from the closure.
 
     // First get the location corresponding to the input date
+    // return -303
     const location = locationManager.getLocation(date);
-    if (!location) return -1;
+    if (!location) return -101;
 
     // Use that location to prepare the database query
     // const state = location.getState();
-    const dateString = date.format('YYYYMMDD');
-    const zipcode = location.getZipcode();
+    const dateString = Number(date.format('YYYYMMDD'));
+    const zipcode = Number(location.getZipcode());
+    // console.log(dateString, zipcode)
     // let county = location.getCounty();
     // county = county.replace(' County', '');
 
@@ -52,8 +54,9 @@ export default (async function controller(places) {
     }
 
     // Return the result
-    if (!result) return -2;
-    return result.tmax; // Return the actual result to be rendered (also depends on database structure).
+    if (!result) return -202;
+    console.log(result.tmax / 10);
+    return result.tmax / 10; // Return the actual result to be rendered (also depends on database structure).
   };
 
   // Set up the dates and date ranges

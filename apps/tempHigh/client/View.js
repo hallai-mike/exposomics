@@ -28,16 +28,20 @@ const Tooltip = entry => (
 
 const extractDate = value => new Date(value.date);
 const mapValueToColor = ({ value }) => {
-  if (value === -1) {
+  if (value === -101 || value === -1 || value === 0) {
     return '#ccc';
-  } else if (value === -2) {
+  } else if (value === -202) {
     return '#aaa';
-  } else if (value < 50) {
-    return '#8cc665';
-  } else if (value < 100) {
-    return '#ffff00';
-  } else if (value < 150) {
-    return '#ffa340';
+  } else if (value < 0) {
+    return '#000080';
+  } else if (value < 10) {
+    return '#0088FF';
+  } else if (value < 20) {
+    return '#00FFFF';
+  } else if (value < 30) {
+    return '#00FF00';
+  } else if (value < 40) {
+    return '#FFA500';
   }
   return '#ff0000';
 };
@@ -131,8 +135,9 @@ export default class View extends React.PureComponent {
           <div className={cx('col-xs-6', cs.moreInfoContent)}>
             <div className="row">
               <p className={cs.footerTitle}>
-                If you want to know more about the Air Quality Index and how
-                <br />it affects your health check out the following links:
+                If you want to know more about temperature highs and how
+                <br />they might affect your health check out the following
+                links:
               </p>
             </div>
             <ul className={cs.moreInfo}>
