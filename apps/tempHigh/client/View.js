@@ -79,44 +79,44 @@ export default class View extends React.PureComponent {
             <ul className={cs.legend}>
               <div className="row">
                 <li>
-                  <div className={cx('col-xs-1', cs.zero)}>
+                  <div className={cx('col-xs-1', cs.temp_zero)}>
                     <span />
                     <br />
-                    <p> &lt; 0C </p>
+                    <p> &lt;0C </p>
                   </div>
                 </li>
                 <li>
-                  <div className={cx('col-xs-1', cs.one)}>
+                  <div className={cx('col-xs-1', cs.temp_one)}>
                     <span />
                     <br />
-                    <p>0C - 10C</p>
+                    <p>0-10 C</p>
                   </div>
                 </li>
                 <li>
-                  <div className={cx('col-xs-1', cs.two)}>
+                  <div className={cx('col-xs-1', cs.temp_two)}>
                     <span />
                     <br />
-                    <p>10C - 20C</p>
+                    <p>10-20 C</p>
                   </div>
                 </li>
                 <li>
-                  <div className={cx('col-xs-1', cs.three)}>
-                    <span />
-                    <br />
-
-                    <p> 20C - 30C </p>
-                  </div>
-                </li>
-                <li>
-                  <div className={cx('col-xs-1', cs.four)}>
+                  <div className={cx('col-xs-1', cs.temp_three)}>
                     <span />
                     <br />
 
-                    <p>30C - 40C</p>
+                    <p> 20-30 C</p>
                   </div>
                 </li>
                 <li>
-                  <div className={cx('col-xs-1', cs.five)}>
+                  <div className={cx('col-xs-1', cs.temp_four)}>
+                    <span />
+                    <br />
+
+                    <p>30-40 C</p>
+                  </div>
+                </li>
+                <li>
+                  <div className={cx('col-xs-1', cs.temp_five)}>
                     <span />
                     <br />
 

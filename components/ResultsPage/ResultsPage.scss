@@ -193,6 +193,54 @@
     color: #4e4f4e;
   }
 }
+.legend .temp_zero {
+  span {
+    background-color: #000080;
+  }
+  p {
+    color: #4e4f4e;
+  }
+}
+.legend .temp_one {
+  span {
+    background-color: #0088FF;
+  }
+  p {
+    color: #4e4f4e;
+  }
+}
+.legend .temp_two {
+  span {
+    background-color: #00FFFF;
+  }
+  p {
+    color: #4e4f4e;
+  }
+}
+.legend .temp_three {
+  span {
+    background-color: #00FF00;
+  }
+  p {
+    color: #4e4f4e;
+  }
+}
+.legend .temp_four {
+  span {
+    background-color: #FFA500;
+  }
+  p {
+    color: #4e4f4e;
+  }
+}
+.legend .temp_five {
+  span {
+    background-color: #FF0000;
+  }
+  p {
+    color: #4e4f4e;
+  }
+}
 
 .footerTitle {
   text-align: left;
