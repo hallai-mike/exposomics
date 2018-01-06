@@ -12,7 +12,7 @@ function prepareData({ startDate, endDate, values, extractDate }) {
     const date = extractDate(entry);
     const day = date.toISOString().substr(0, 10);
     if (cache[day]) {
-      throw new Error(`Duplicate record for ${day}`);
+      // throw new Error(`Duplicate record for ${day}`);
     }
     cache[day] = entry;
   });
