@@ -89,14 +89,14 @@ export default class View extends React.PureComponent {
                   <div className={cx('col-xs-1', cs.temp_one)}>
                     <span />
                     <br />
-                    <p>0-10 C</p>
+                    <p>0&minus;10C</p>
                   </div>
                 </li>
                 <li>
                   <div className={cx('col-xs-1', cs.temp_two)}>
                     <span />
                     <br />
-                    <p>10-20 C</p>
+                    <p>10&minus;20C</p>
                   </div>
                 </li>
                 <li>
@@ -104,7 +104,7 @@ export default class View extends React.PureComponent {
                     <span />
                     <br />
 
-                    <p> 20-30 C</p>
+                    <p>20&minus;30C</p>
                   </div>
                 </li>
                 <li>
@@ -112,7 +112,7 @@ export default class View extends React.PureComponent {
                     <span />
                     <br />
 
-                    <p>30-40 C</p>
+                    <p>30&minus;40C</p>
                   </div>
                 </li>
                 <li>
@@ -120,9 +120,50 @@ export default class View extends React.PureComponent {
                     <span />
                     <br />
 
-                    <p> &gt; 40C</p>
+                    <p> &gt;40C</p>
                   </div>
                 </li>
+              </div>
+            </ul>
+          </div>
+          <div className={cx('col-xs-6', cs.moreInfoContent)}>
+            <div className="row">
+              <p className={cs.footerTitle}>
+                If you want to know more about this temperature data and where
+                it comes from check out the following links:
+              </p>
+            </div>
+            <ul className={cs.moreInfo}>
+              <div className="row">
+                <div className="col-xs-6">
+                  <li>
+                    <a
+                      href="https://www.ncdc.noaa.gov/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      NOAA National Centers for Environmental Information
+                    </a>
+                    <br />
+                    <span>
+                      The government website for public environmental data
+                    </span>
+                  </li>
+                </div>
+
+                <div className="col-xs-6">
+                  <li>
+                    <a
+                      href="ftp://ftp.ncdc.noaa.gov/pub/data/ghcn/daily/by_year/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Daily weather station data
+                    </a>
+                    <br />
+                    <span>Public ftp server</span>
+                  </li>
+                </div>
               </div>
             </ul>
           </div>
