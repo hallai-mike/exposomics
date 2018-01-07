@@ -43,6 +43,25 @@ export default class ExposomicsData {
   }
 
   /**
+   * This function iterates from `startDate` to `endDate` at the given interval, and calls `this.dataSource`
+   * to generate the data point for each date. The results are stored in `this.dataList`, and can be plotted
+   * by calling the `getPlotData` function.
+   */
+  async batchPopulateDataList(locationManager, dataSource) {
+    // for (
+    //   let curDay = this.startDate.clone();
+    //   curDay.isBefore(this.endDate);
+    //   curDay = curDay.clone().add(this.interval)
+    // ) {
+    for (const l of locationManager.locationObjects) {
+      const results = await dataSource(l);
+      for (const r of results) {
+        this.dataList.push(r);
+      }
+    }
+  }
+
+  /**
    * This function allows exporting of a user's exposomics data via `JSON.stringify()`
    *
    */

@@ -59,6 +59,44 @@ export default (async function controller(places) {
     return result.tmax / 10; // Return the actual result to be rendered (also depends on database structure).
   };
 
+  const batchQueryLogic = async function batchQueryLogic(
+    location,
+    startDate,
+    endDate,
+  ) {
+    const startDateNum = Number(startDate.format('YYYYMMDD'));
+    const endDateNum = Number(endDate.format('YYYYMMDD'));
+    const zipcode = Number(location.getZipcode());
+
+    let result;
+    try {
+      result = await TemperatureRecord.find({
+        date: { $gt: startDateNum, $lt: endDateNum },
+        zipcode,
+      });
+      console.log(result);
+    } catch (e) {
+      console.log('database error.');
+      console.log(e);
+    }
+
+    let retArray;
+    if (!result) {
+      retArray = Array(endDate.diff(startDate, 'days')).fill(-202);
+    } else {
+      for (const r of result) {
+        const nObj = {
+          date: moment(r.date),
+          value: r.tmax / 10,
+        };
+        console.log(nObj);
+        retArray.push(nObj);
+      }
+    }
+
+    return retArray;
+  };
+
   // Set up the dates and date ranges
   const startDate = locationManager.getStartDate();
   const endDate = locationManager.getEndDate();
@@ -74,7 +112,8 @@ export default (async function controller(places) {
     interval,
   );
 
-  await dataObject.populateDataList(); // This needs to be a seperate call because it's an async function
+  await dataObject.batchPopulateDataList(locationManager, batchQueryLogic);
+  // await dataObject.populateDataList(); // This needs to be a seperate call because it's an async function
   // and can't be done in the constructor of ExposomicsData
 
   // Return results in the form that the React component is expecting.
