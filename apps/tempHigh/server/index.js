@@ -76,7 +76,7 @@ export default (async function controller(places) {
         zipcode,
       });
       // console.log("result is: ")
-      console.log(result);
+      // console.log(result);
     } catch (e) {
       console.log('database error.');
       console.log(e);
