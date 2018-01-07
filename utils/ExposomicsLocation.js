@@ -55,6 +55,8 @@ export default class ExposomicsLocation {
         return ac.short_name;
       }
     }
-    throw new Error('zipcode not found');
+    throw new Error(
+      'zipcode not found - you must enter a location with a zipcode',
+    );
   }
 }

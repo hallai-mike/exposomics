@@ -28,7 +28,7 @@ const Tooltip = entry => (
 
 const extractDate = value => new Date(value.date);
 const mapValueToColor = ({ value }) => {
-  if (value === -101 || value === -1 || value === 0) {
+  if (value === -101 || value === -1) {
     return '#ccc';
   } else if (value === -202) {
     return '#aaa';

@@ -59,11 +59,11 @@ export default (async function controller(places) {
     return result.tmax / 10; // Return the actual result to be rendered (also depends on database structure).
   };
 
-  const batchQueryLogic = async function batchQueryLogic(
-    location,
-    startDate,
-    endDate,
-  ) {
+  const batchQueryLogic = async function batchQueryLogic(locationObj) {
+    const location = locationObj.location;
+    const startDate = locationObj.startDate;
+    const endDate = locationObj.endDate;
+
     const startDateNum = Number(startDate.format('YYYYMMDD'));
     const endDateNum = Number(endDate.format('YYYYMMDD'));
     const zipcode = Number(location.getZipcode());
@@ -72,8 +72,10 @@ export default (async function controller(places) {
     try {
       result = await TemperatureRecord.find({
         date: { $gt: startDateNum, $lt: endDateNum },
+        // zipcode: { $gt:zipcode-2, $lt: zipcode+2},
         zipcode,
       });
+      // console.log("result is: ")
       console.log(result);
     } catch (e) {
       console.log('database error.');
@@ -84,12 +86,16 @@ export default (async function controller(places) {
     if (!result) {
       retArray = Array(endDate.diff(startDate, 'days')).fill(-202);
     } else {
+      retArray = [];
       for (const r of result) {
+        if (r.tmax == null) {
+          continue; // eslint-disable-line no-continue
+        }
         const nObj = {
-          date: moment(r.date),
+          date: moment(String(r.date), 'YYYYMMDD'),
           value: r.tmax / 10,
         };
-        console.log(nObj);
+        // console.log(nObj);
         retArray.push(nObj);
       }
     }
