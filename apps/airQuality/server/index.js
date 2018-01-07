@@ -53,7 +53,54 @@ export default (async function controller(places) {
 
     // Return the result
     if (!result) return -2;
-    return result.AQI; // Return the actual result to be rendered (also depends on database structure).
+    return result.aqi; // Return the actual result to be rendered (also depends on database structure).
+  };
+
+  const batchQueryLogic = async function batchQueryLogic(locationObj) {
+    const location = locationObj.location;
+    const startDate = locationObj.startDate;
+    const endDate = locationObj.endDate;
+
+    const startDateString = startDate.format('YYYY-MM-DD');
+    const endDateString = endDate.format('YYYY-MM-DD');
+    const state = location.getState();
+    let county = location.getCounty();
+    county = county.replace(' County', '');
+
+    let result;
+    try {
+      result = await AirQualityRecord.find({
+        date: { $gt: startDateString, $lt: endDateString },
+        // zipcode: { $gt:zipcode-2, $lt: zipcode+2},
+        state,
+        county,
+      });
+      // console.log("result is: ")
+      // console.log(result);
+    } catch (e) {
+      console.log('database error.');
+      console.log(e);
+    }
+
+    let retArray;
+    if (!result) {
+      retArray = Array(endDate.diff(startDate, 'days')).fill(-2);
+    } else {
+      retArray = [];
+      for (const r of result) {
+        if (r.aqi == null) {
+          continue; // eslint-disable-line no-continue
+        }
+        const nObj = {
+          date: moment(r.date, 'YYYY-MM-DD'),
+          value: r.aqi,
+        };
+        // console.log(nObj);
+        retArray.push(nObj);
+      }
+    }
+
+    return retArray;
   };
 
   // Set up the dates and date ranges
@@ -71,7 +118,9 @@ export default (async function controller(places) {
     interval,
   );
 
-  await dataObject.populateDataList(); // This needs to be a seperate call because it's an async function
+  await dataObject.batchPopulateDataList(locationManager, batchQueryLogic);
+
+  // await dataObject.populateDataList(); // This needs to be a seperate call because it's an async function
   // and can't be done in the constructor of ExposomicsData
 
   // Return results in the form that the React component is expecting.

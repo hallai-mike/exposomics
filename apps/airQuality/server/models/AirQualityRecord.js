@@ -17,13 +17,8 @@ const AirQualityRecordSchema = new mongoose.Schema(
       required: true,
       unique: false,
     },
-    AQI: {
+    aqi: {
       type: Number,
-      required: true,
-      unique: false,
-    },
-    Category: {
-      type: String,
       required: true,
       unique: false,
     },
