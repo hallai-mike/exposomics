@@ -30,8 +30,7 @@ after_success:
   - docker login -u $DOCKER_USER -p $DOCKER_PASS
   - export TAG=`if [ "$TRAVIS_BRANCH" == "master" ]; then echo "latest"; else echo $TRAVIS_BRANCH
     ; fi`
-  - export publicUrl=`if [ "$TRAVIS_BRANCH" == "master" ]; then echo "https://exposomics.doc.ai"; else echo https://exposomics.$TRAVIS_BRANCH.docai.co
-    ; fi`
+  - export publicUrl="https://exposomics.doc.ai"
   - docker build -f Dockerfile --build-arg googleMapsApiKey=$googleMapsApiKey --build-arg publicUrl=$publicUrl -t $REPO:$COMMIT .
   - docker tag $REPO:$COMMIT $REPO:$TAG
   - docker tag $REPO:$COMMIT $REPO:travis-$TRAVIS_BUILD_NUMBER
