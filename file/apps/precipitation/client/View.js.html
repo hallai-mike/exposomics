@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../../../">
+  <title data-ice="title">apps/precipitation/client/View.js | Exposomics</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<meta name="description" content="Discover things you are exposed to"><meta property="og:type" content="website"><meta property="og:url" content="https://doc-ai.github.io/exposomics"><meta property="og:site_name" content="Exposomics"><meta property="og:title" content="Exposomics"><meta property="og:image" content="./docs/asset/logo.png"><meta property="og:description" content="Discover things you are exposed to"><meta property="og:author" content="doc.ai Team &lt;dev@doc.ai&gt;"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="Exposomics"><meta property="twitter:description" content="Discover things you are exposed to"><meta property="twitter:image" content="./docs/asset/logo.png"></head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./" style="display: flex; align-items: center;"><img src="./image/brand_logo.png" style="width:34px;"></a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+<a style="position:relative; top:3px;" href="https://github.com/doc-ai/exposomics"><img width="20px" src="./image/github.png"></a></header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#airquality-client">airQuality/client</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/apps/airQuality/client/View.js~View.html">View</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#airquality-client-components-heatmap">airQuality/client/components/Heatmap</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/apps/airQuality/client/components/Heatmap/HeatmapRow.js~HeatmapRow.html">HeatmapRow</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/apps/airQuality/client/components/Heatmap/index.js~Heatmap.html">Heatmap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getRelativeCoordinates">getRelativeCoordinates</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#airquality-server">airQuality/server</a><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-controller">controller</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-prepareData">prepareData</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#precipitation-client">precipitation/client</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/apps/precipitation/client/View.js~View.html">View</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#precipitation-client-components-heatmap">precipitation/client/components/Heatmap</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/apps/precipitation/client/components/Heatmap/HeatmapRow.js~HeatmapRow.html">HeatmapRow</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/apps/precipitation/client/components/Heatmap/index.js~Heatmap.html">Heatmap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getRelativeCoordinates">getRelativeCoordinates</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#precipitation-server">precipitation/server</a><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-controller">controller</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-prepareData">prepareData</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#snow-client">snow/client</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/apps/snow/client/View.js~View.html">View</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#snow-client-components-heatmap">snow/client/components/Heatmap</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/apps/snow/client/components/Heatmap/HeatmapRow.js~HeatmapRow.html">HeatmapRow</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/apps/snow/client/components/Heatmap/index.js~Heatmap.html">Heatmap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getRelativeCoordinates">getRelativeCoordinates</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#snow-server">snow/server</a><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-controller">controller</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-prepareData">prepareData</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#temphigh-client">tempHigh/client</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/apps/tempHigh/client/View.js~View.html">View</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#temphigh-client-components-heatmap">tempHigh/client/components/Heatmap</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/apps/tempHigh/client/components/Heatmap/HeatmapRow.js~HeatmapRow.html">HeatmapRow</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/apps/tempHigh/client/components/Heatmap/index.js~Heatmap.html">Heatmap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getRelativeCoordinates">getRelativeCoordinates</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#temphigh-server">tempHigh/server</a><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-controller">controller</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-prepareData">prepareData</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#templow-client">tempLow/client</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/apps/tempLow/client/View.js~View.html">View</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#templow-client-components-heatmap">tempLow/client/components/Heatmap</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/apps/tempLow/client/components/Heatmap/HeatmapRow.js~HeatmapRow.html">HeatmapRow</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/apps/tempLow/client/components/Heatmap/index.js~Heatmap.html">Heatmap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getRelativeCoordinates">getRelativeCoordinates</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#templow-server">tempLow/server</a><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-controller">controller</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-prepareData">prepareData</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">apps/precipitation/client/View.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import React from &apos;react&apos;;
+import { shape, arrayOf, any, string } from &apos;prop-types&apos;;
+import cx from &apos;classnames&apos;;
+import CalendarHeatmap from &apos;./components/Heatmap&apos;;
+import Style from &apos;../../../components/Style&apos;;
+import {
+  classNames as cs,
+  stylesheet,
+} from &apos;../../../components/ResultsPage/ResultsPage.scss&apos;;
+
+const Tooltip = entry =&gt; (
+  &lt;div
+    style={{
+      backgroundColor: &apos;white&apos;,
+      borderRadius: 5,
+      border: &apos;solid #808080 1px&apos;,
+      padding: 5,
+    }}
+  &gt;
+    &lt;div&gt;
+      &lt;strong&gt;{entry.date.substring(0, 10)}&lt;/strong&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+      Value: &lt;strong&gt;{entry.value}&lt;/strong&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+);
+
+const extractDate = value =&gt; new Date(value.date);
+const mapValueToColor = ({ value }) =&gt; {
+  if (value === -101 || value === -1 || value === 0) {
+    return &apos;#ccc&apos;;
+  } else if (value === -202) {
+    return &apos;#aaa&apos;;
+  } else if (value &lt; 0) {
+    return &apos;#000080&apos;;
+  } else if (value &lt; 10) {
+    return &apos;#0088FF&apos;;
+  } else if (value &lt; 20) {
+    return &apos;#00FFFF&apos;;
+  } else if (value &lt; 30) {
+    return &apos;#00FF00&apos;;
+  } else if (value &lt; 40) {
+    return &apos;#FFA500&apos;;
+  }
+  return &apos;#ff0000&apos;;
+};
+
+export default class View extends React.PureComponent {
+  static propTypes = {
+    data: shape({
+      startDate: string,
+      endDate: string,
+      dataList: arrayOf(any),
+    }).isRequired,
+  };
+
+  render() {
+    const { data } = this.props;
+    const dataList = data.dataList;
+    const endDate = data.endDate;
+    const startDate = data.startDate;
+    // console.log(dataList);
+    return (
+      &lt;div&gt;
+        &lt;Style stylesheet={stylesheet} /&gt;
+
+        &lt;CalendarHeatmap
+          startDate={startDate}
+          endDate={endDate}
+          values={dataList}
+          extractDate={extractDate}
+          mapValueToColor={mapValueToColor}
+          renderTooltip={Tooltip}
+        /&gt;
+
+        &lt;div className=&quot;row&quot;&gt;
+          &lt;div className=&quot;col-xs-6&quot;&gt;
+            &lt;ul className={cs.legend}&gt;
+              &lt;div className=&quot;row&quot;&gt;
+                &lt;li&gt;
+                  &lt;div className={cx(&apos;col-xs-1&apos;, cs.temp_zero)}&gt;
+                    &lt;span /&gt;
+                    &lt;br /&gt;
+                    &lt;p&gt; &amp;lt;0 &lt;/p&gt;
+                  &lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                  &lt;div className={cx(&apos;col-xs-1&apos;, cs.temp_one)}&gt;
+                    &lt;span /&gt;
+                    &lt;br /&gt;
+                    &lt;p&gt;0&amp;minus;10&lt;/p&gt;
+                  &lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                  &lt;div className={cx(&apos;col-xs-1&apos;, cs.temp_two)}&gt;
+                    &lt;span /&gt;
+                    &lt;br /&gt;
+                    &lt;p&gt;10&amp;minus;20&lt;/p&gt;
+                  &lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                  &lt;div className={cx(&apos;col-xs-1&apos;, cs.temp_three)}&gt;
+                    &lt;span /&gt;
+                    &lt;br /&gt;
+
+                    &lt;p&gt;20&amp;minus;30&lt;/p&gt;
+                  &lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                  &lt;div className={cx(&apos;col-xs-1&apos;, cs.temp_four)}&gt;
+                    &lt;span /&gt;
+                    &lt;br /&gt;
+
+                    &lt;p&gt;30&amp;minus;40&lt;/p&gt;
+                  &lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                  &lt;div className={cx(&apos;col-xs-1&apos;, cs.temp_five)}&gt;
+                    &lt;span /&gt;
+                    &lt;br /&gt;
+
+                    &lt;p&gt; &amp;gt;40&lt;/p&gt;
+                  &lt;/div&gt;
+                &lt;/li&gt;
+              &lt;/div&gt;
+            &lt;/ul&gt;
+          &lt;/div&gt;
+          &lt;div className={cx(&apos;col-xs-6&apos;, cs.moreInfoContent)}&gt;
+            &lt;div className=&quot;row&quot;&gt;
+              &lt;p className={cs.footerTitle}&gt;
+                If you want to know more about this precipitation data and where
+                it comes from check out the following links:
+              &lt;/p&gt;
+            &lt;/div&gt;
+            &lt;ul className={cs.moreInfo}&gt;
+              &lt;div className=&quot;row&quot;&gt;
+                &lt;div className=&quot;col-xs-6&quot;&gt;
+                  &lt;li&gt;
+                    &lt;a
+                      href=&quot;https://www.ncdc.noaa.gov/&quot;
+                      target=&quot;_blank&quot;
+                      rel=&quot;noopener noreferrer&quot;
+                    &gt;
+                      NOAA National Centers for Environmental Information
+                    &lt;/a&gt;
+                    &lt;br /&gt;
+                    &lt;span&gt;
+                      The government website for public environmental data
+                    &lt;/span&gt;
+                  &lt;/li&gt;
+                &lt;/div&gt;
+
+                &lt;div className=&quot;col-xs-6&quot;&gt;
+                  &lt;li&gt;
+                    &lt;a
+                      href=&quot;ftp://ftp.ncdc.noaa.gov/pub/data/ghcn/daily/by_year/&quot;
+                      target=&quot;_blank&quot;
+                      rel=&quot;noopener noreferrer&quot;
+                    &gt;
+                      Daily weather station data
+                    &lt;/a&gt;
+                    &lt;br /&gt;
+                    &lt;span&gt;Public ftp server&lt;/span&gt;
+                  &lt;/li&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/ul&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    );
+  }
+}
+</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.0.4)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

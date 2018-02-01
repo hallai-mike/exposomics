@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../../../../../">
+  <title data-ice="title">apps/tempLow/client/components/Heatmap/index.js | Exposomics</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<meta name="description" content="Discover things you are exposed to"><meta property="og:type" content="website"><meta property="og:url" content="https://doc-ai.github.io/exposomics"><meta property="og:site_name" content="Exposomics"><meta property="og:title" content="Exposomics"><meta property="og:image" content="./docs/asset/logo.png"><meta property="og:description" content="Discover things you are exposed to"><meta property="og:author" content="doc.ai Team &lt;dev@doc.ai&gt;"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="Exposomics"><meta property="twitter:description" content="Discover things you are exposed to"><meta property="twitter:image" content="./docs/asset/logo.png"></head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./" style="display: flex; align-items: center;"><img src="./image/brand_logo.png" style="width:34px;"></a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+<a style="position:relative; top:3px;" href="https://github.com/doc-ai/exposomics"><img width="20px" src="./image/github.png"></a></header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#airquality-client">airQuality/client</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/apps/airQuality/client/View.js~View.html">View</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#airquality-client-components-heatmap">airQuality/client/components/Heatmap</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/apps/airQuality/client/components/Heatmap/HeatmapRow.js~HeatmapRow.html">HeatmapRow</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/apps/airQuality/client/components/Heatmap/index.js~Heatmap.html">Heatmap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getRelativeCoordinates">getRelativeCoordinates</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#airquality-server">airQuality/server</a><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-controller">controller</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-prepareData">prepareData</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#precipitation-client">precipitation/client</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/apps/precipitation/client/View.js~View.html">View</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#precipitation-client-components-heatmap">precipitation/client/components/Heatmap</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/apps/precipitation/client/components/Heatmap/HeatmapRow.js~HeatmapRow.html">HeatmapRow</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/apps/precipitation/client/components/Heatmap/index.js~Heatmap.html">Heatmap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getRelativeCoordinates">getRelativeCoordinates</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#precipitation-server">precipitation/server</a><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-controller">controller</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-prepareData">prepareData</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#snow-client">snow/client</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/apps/snow/client/View.js~View.html">View</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#snow-client-components-heatmap">snow/client/components/Heatmap</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/apps/snow/client/components/Heatmap/HeatmapRow.js~HeatmapRow.html">HeatmapRow</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/apps/snow/client/components/Heatmap/index.js~Heatmap.html">Heatmap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getRelativeCoordinates">getRelativeCoordinates</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#snow-server">snow/server</a><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-controller">controller</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-prepareData">prepareData</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#temphigh-client">tempHigh/client</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/apps/tempHigh/client/View.js~View.html">View</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#temphigh-client-components-heatmap">tempHigh/client/components/Heatmap</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/apps/tempHigh/client/components/Heatmap/HeatmapRow.js~HeatmapRow.html">HeatmapRow</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/apps/tempHigh/client/components/Heatmap/index.js~Heatmap.html">Heatmap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getRelativeCoordinates">getRelativeCoordinates</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#temphigh-server">tempHigh/server</a><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-controller">controller</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-prepareData">prepareData</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#templow-client">tempLow/client</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/apps/tempLow/client/View.js~View.html">View</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#templow-client-components-heatmap">tempLow/client/components/Heatmap</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/apps/tempLow/client/components/Heatmap/HeatmapRow.js~HeatmapRow.html">HeatmapRow</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/apps/tempLow/client/components/Heatmap/index.js~Heatmap.html">Heatmap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getRelativeCoordinates">getRelativeCoordinates</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#templow-server">tempLow/server</a><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-controller">controller</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-prepareData">prepareData</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">apps/tempLow/client/components/Heatmap/index.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import React from &apos;react&apos;;
+import { func, arrayOf, any, string } from &apos;prop-types&apos;;
+import HeatmapRow from &apos;./HeatmapRow&apos;;
+import getRelativeCoordinates from &apos;./getRelativeCoordinates&apos;;
+
+function prepareData({ startDate, endDate, values, extractDate }) {
+  if (endDate &lt; startDate) {
+    throw new Error(&apos;End date should be greater than start date&apos;);
+  }
+  const cache = Object.create(null);
+  values.forEach(entry =&gt; {
+    const date = extractDate(entry);
+    const day = date.toISOString().substr(0, 10);
+    if (cache[day]) {
+      // throw new Error(`Duplicate record for ${day}`);
+    }
+    cache[day] = entry;
+  });
+
+  const normalizedDataSplits = Object.create(null);
+  const startYear = new Date(startDate).getFullYear();
+  const endYear = new Date(endDate).getFullYear();
+  for (let year = startYear; year &lt;= endYear; year += 1) {
+    normalizedDataSplits[year] = [];
+    for (
+      let currentDate = new Date(year, 0, 1);
+      currentDate.getFullYear() === year;
+      currentDate.setDate(currentDate.getDate() + 1)
+    ) {
+      if (currentDate.getMonth() === 1 &amp;&amp; currentDate.getDate() === 29) {
+        continue; // eslint-disable-line no-continue
+      }
+      const day = currentDate.toISOString().substring(0, 10);
+      normalizedDataSplits[year].push(
+        cache[day] || {
+          date: currentDate.toISOString(),
+          value: -1,
+        },
+      );
+    }
+  }
+
+  return normalizedDataSplits;
+}
+
+export default class Heatmap extends React.Component {
+  static propTypes = {
+    // eslint-disable-next-line react/forbid-prop-types
+    values: arrayOf(any).isRequired,
+    startDate: string.isRequired,
+    endDate: string.isRequired,
+    mapValueToColor: func.isRequired,
+    renderTooltip: func,
+  };
+
+  static defaultProps = {
+    renderTooltip: () =&gt; null,
+  };
+
+  constructor(props) {
+    super();
+
+    this.state = { data: prepareData(props) };
+  }
+
+  componentWillReceiveProps(newProps) {
+    if (
+      newProps.values !== this.props.values ||
+      newProps.startDate !== this.props.startDate ||
+      newProps.endDate !== this.props.endDate
+    ) {
+      this.setState({ data: prepareData(newProps), tooltipEntry: null });
+    }
+  }
+
+  clearCoords = () =&gt; {
+    this.setState({ tooltipEntry: null });
+  };
+
+  handleMouseMove = e =&gt; {
+    this.setState({
+      tooltipCoords: getRelativeCoordinates(e, this.container),
+    });
+  };
+
+  selectEntry = e =&gt; {
+    this.setState({ tooltipEntry: e });
+  };
+
+  render() {
+    const { data, tooltipEntry, tooltipCoords } = this.state;
+    const { mapValueToColor, renderTooltip } = this.props;
+    return (
+      &lt;div
+        style={{ position: &apos;relative&apos; }}
+        ref={c =&gt; {
+          this.container = c;
+        }}
+      &gt;
+        &lt;div onMouseMove={this.handleMouseMove} onMouseLeave={this.clearCoords}&gt;
+          {Object.keys(data).map(year =&gt; (
+            &lt;HeatmapRow
+              key={year}
+              onSelectEntry={this.selectEntry}
+              onMouseLeave={this.clearCoords}
+              text={year}
+              data={data[year]}
+              mapValueToColor={mapValueToColor}
+            /&gt;
+          ))}
+        &lt;/div&gt;
+        {tooltipEntry &amp;&amp; (
+          &lt;div
+            style={{
+              position: &apos;absolute&apos;,
+              zIndex: 2,
+              left: tooltipCoords.x,
+              top: tooltipCoords.y,
+              transform: &apos;translateX(-50%) translateY(5px)&apos;,
+            }}
+            className=&quot;foo&quot;
+          &gt;
+            {renderTooltip(tooltipEntry)}
+          &lt;/div&gt;
+        )}
+      &lt;/div&gt;
+    );
+  }
+}
+</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.0.4)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>
