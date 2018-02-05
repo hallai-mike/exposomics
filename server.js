@@ -81,7 +81,84 @@ nextApp.prepare().then(async () => {
     resultsArr.forEach(item => {
       results[item.name] = item.results;
     });
+    console.log(results)
+    ctx.body = results;
+  });
 
+  router.post('/api/places-monthly', async ctx => {
+    const { request: { body } } = ctx;
+
+    const places = body.places.map((place, idx) => {
+      const result = {};
+
+      ['location', 'fromDate', 'toDate'].forEach(key => {
+        if (!place[key]) {
+          throw new BadRequest(`No ${key} is provided for place ${idx}`);
+        }
+      });
+
+      // TODO: convert location to Location class and use the same also on frontend
+      result.location = place.location;
+
+      ['fromDate', 'toDate'].forEach(key => {
+        try {
+          result[key] = moment(new Date(place[key]));
+        } catch (e) {
+          throw new BadRequest(
+            `Wrong ${key} is provided for place ${
+              idx
+            }. Expected ISO-8601 formatted string.`,
+          );
+        }
+      });
+
+      if (result.toDate.isBefore(result.fromDate)) {
+        throw new BadRequest(
+          `Wrong fromDate is provided for place ${
+            idx
+          }. It cannot be before toDate.`,
+        );
+      }
+
+      // TODO: some more checks
+
+      return result;
+    });
+
+    if (!places.length) {
+      throw new BadRequest('Please provide at least one place where you lived');
+    }
+
+    const resultsArr = await Promise.all(
+      Object.keys(apps).map(async name => ({
+        name,
+        results: await apps[name](places),
+      })),
+    );
+
+    const results = {};
+    resultsArr.forEach(item => {
+      // results[item.name] = item.results;
+      let rArr = []
+      let count = 1
+      let total = 0
+      item.results.dataList.forEach(dataObj => {
+        total += dataObj["value"]
+        if (count % 30 == 0) {
+          const o = item.results.dataList[count-30]
+          o["value"] = parseInt(total/30)
+          console.log(o)
+          rArr.push(o)
+
+          total = 0
+        }
+        count += 1
+
+      })
+      item.results.dataList = rArr
+      results[item.name] = item.results
+    });
+    // console.log(results)
     ctx.body = results;
   });
 
